@@ -21,7 +21,7 @@ namespace ExpressProfiler
 {
     public partial class MainForm : Form
     {
-        internal const string versionString = "Express Profiler v2.2";
+        internal const string versionString = "Bilnex Profiler v2.2";
 
         private class PerfInfo
         {
@@ -77,8 +77,8 @@ namespace ExpressProfiler
             tbStart.DefaultItem = tbRun;
             Text = versionString;
             edPassword.TextBox.PasswordChar = '*';
-            m_servername = Properties.Settings.Default.ServerName;
-            m_username = Properties.Settings.Default.UserName;
+            m_servername = BilnexProfiler.Properties.Settings.Default.ServerName;
+            m_username = BilnexProfiler.Properties.Settings.Default.UserName;
             m_currentsettings = GetDefaultSettings();
             ParseCommandLine();
             InitLV();
@@ -95,7 +95,7 @@ namespace ExpressProfiler
             try
             {
                 XmlSerializer x = new XmlSerializer(typeof(TraceProperties.TraceSettings));
-                using (StringReader sr = new StringReader(Properties.Settings.Default.TraceSettings))
+                using (StringReader sr = new StringReader(BilnexProfiler.Properties.Settings.Default.TraceSettings))
                 {
                     return (TraceProperties.TraceSettings)x.Deserialize(sr);
                     
@@ -331,7 +331,7 @@ namespace ExpressProfiler
             m_columns.Add(new PerfColumn{ Caption = "Event Class", Column = ProfilerEventColumns.EventClass,Width = 122});
             m_columns.Add(new PerfColumn { Caption = "Text Data", Column = ProfilerEventColumns.TextData, Width = 255});
             m_columns.Add(new PerfColumn { Caption = "Login Name", Column = ProfilerEventColumns.LoginName, Width = 79 });
-            m_columns.Add(new PerfColumn { Caption = "CPU", Column = ProfilerEventColumns.CPU, Width = 82, Alignment = HorizontalAlignment.Right, Format = "#,0" });
+           // m_columns.Add(new PerfColumn { Caption = "CPU", Column = ProfilerEventColumns.CPU, Width = 82, Alignment = HorizontalAlignment.Right, Format = "#,0" });
             m_columns.Add(new PerfColumn { Caption = "Reads", Column = ProfilerEventColumns.Reads, Width = 78, Alignment = HorizontalAlignment.Right, Format = "#,0" });
             m_columns.Add(new PerfColumn { Caption = "Writes", Column = ProfilerEventColumns.Writes, Width = 78, Alignment = HorizontalAlignment.Right, Format = "#,0" });
             m_columns.Add(new PerfColumn { Caption = "Duration, ms", Column = ProfilerEventColumns.Duration, Width = 82, Alignment = HorizontalAlignment.Right, Format = "#,0" });
@@ -737,9 +737,9 @@ namespace ExpressProfiler
 
 	    private void SaveDefaultSettings()
 	    {
-		    Properties.Settings.Default.ServerName = m_servername;
-		    Properties.Settings.Default.UserName = tbAuth.SelectedIndex == 0 ? "" : m_username;
-		    Properties.Settings.Default.Save();
+		    BilnexProfiler.Properties.Settings.Default.ServerName = m_servername;
+            BilnexProfiler.Properties.Settings.Default.UserName = tbAuth.SelectedIndex == 0 ? "" : m_username;
+            BilnexProfiler.Properties.Settings.Default.Save();
 	    }
 
 

@@ -87,7 +87,6 @@
             this.clearTraceWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keepSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stayOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transparentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,9 +105,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slEPS});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 488);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 715);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(979, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1080, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -143,14 +142,14 @@
             this.tbTransparent});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(979, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1080, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tbClear
             // 
             this.tbClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbClear.Image = global::ExpressProfiler.Properties.Resources.imClear;
+            this.tbClear.Image = global::BilnexProfiler.Properties.Resources.imClear;
             this.tbClear.ImageTransparentColor = System.Drawing.Color.Silver;
             this.tbClear.Name = "tbClear";
             this.tbClear.Size = new System.Drawing.Size(23, 22);
@@ -169,7 +168,7 @@
             this.tbScroll.CheckOnClick = true;
             this.tbScroll.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tbScroll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbScroll.Image = global::ExpressProfiler.Properties.Resources.imScroll;
+            this.tbScroll.Image = global::BilnexProfiler.Properties.Resources.imScroll;
             this.tbScroll.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tbScroll.Name = "tbScroll";
             this.tbScroll.Size = new System.Drawing.Size(23, 22);
@@ -186,7 +185,7 @@
             this.tbStart.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tbRun,
             this.tbRunWithFilters});
-            this.tbStart.Image = global::ExpressProfiler.Properties.Resources.imStart;
+            this.tbStart.Image = global::BilnexProfiler.Properties.Resources.imStart;
             this.tbStart.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tbStart.Name = "tbStart";
             this.tbStart.Size = new System.Drawing.Size(32, 22);
@@ -196,21 +195,21 @@
             // 
             this.tbRun.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.tbRun.Name = "tbRun";
-            this.tbRun.Size = new System.Drawing.Size(153, 22);
+            this.tbRun.Size = new System.Drawing.Size(180, 22);
             this.tbRun.Text = "Run";
             this.tbRun.Click += new System.EventHandler(this.tbStart_Click);
             // 
             // tbRunWithFilters
             // 
             this.tbRunWithFilters.Name = "tbRunWithFilters";
-            this.tbRunWithFilters.Size = new System.Drawing.Size(153, 22);
+            this.tbRunWithFilters.Size = new System.Drawing.Size(180, 22);
             this.tbRunWithFilters.Text = "Run with filters";
             this.tbRunWithFilters.Click += new System.EventHandler(this.tbRunWithFilters_Click);
             // 
             // tbPause
             // 
             this.tbPause.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbPause.Image = global::ExpressProfiler.Properties.Resources.imPause;
+            this.tbPause.Image = global::BilnexProfiler.Properties.Resources.imPause;
             this.tbPause.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tbPause.Name = "tbPause";
             this.tbPause.Size = new System.Drawing.Size(23, 22);
@@ -220,7 +219,7 @@
             // tbStop
             // 
             this.tbStop.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbStop.Image = global::ExpressProfiler.Properties.Resources.imStop;
+            this.tbStop.Image = global::BilnexProfiler.Properties.Resources.imStop;
             this.tbStop.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tbStop.Name = "tbStop";
             this.tbStop.Size = new System.Drawing.Size(23, 22);
@@ -236,7 +235,7 @@
             // 
             this.tbFilterEvents.CheckOnClick = true;
             this.tbFilterEvents.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbFilterEvents.Image = global::ExpressProfiler.Properties.Resources.filter;
+            this.tbFilterEvents.Image = global::BilnexProfiler.Properties.Resources.filter;
             this.tbFilterEvents.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.tbFilterEvents.Name = "tbFilterEvents";
             this.tbFilterEvents.Size = new System.Drawing.Size(23, 22);
@@ -256,8 +255,9 @@
             // 
             // edServer
             // 
+            this.edServer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.edServer.Name = "edServer";
-            this.edServer.Size = new System.Drawing.Size(100, 25);
+            this.edServer.Size = new System.Drawing.Size(200, 25);
             this.edServer.TextChanged += new System.EventHandler(this.edServer_TextChanged);
             // 
             // toolStripSeparator4
@@ -283,6 +283,7 @@
             // 
             // edUser
             // 
+            this.edUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.edUser.Name = "edUser";
             this.edUser.Size = new System.Drawing.Size(100, 25);
             this.edUser.TextChanged += new System.EventHandler(this.edUser_TextChanged);
@@ -295,6 +296,7 @@
             // 
             // edPassword
             // 
+            this.edPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.edPassword.Name = "edPassword";
             this.edPassword.Size = new System.Drawing.Size(100, 25);
             // 
@@ -335,8 +337,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.reTextData);
-            this.splitContainer1.Size = new System.Drawing.Size(979, 439);
-            this.splitContainer1.SplitterDistance = 281;
+            this.splitContainer1.Size = new System.Drawing.Size(1080, 666);
+            this.splitContainer1.SplitterDistance = 426;
             this.splitContainer1.TabIndex = 4;
             // 
             // reTextData
@@ -346,7 +348,7 @@
             this.reTextData.Location = new System.Drawing.Point(0, 0);
             this.reTextData.Name = "reTextData";
             this.reTextData.ReadOnly = true;
-            this.reTextData.Size = new System.Drawing.Size(979, 154);
+            this.reTextData.Size = new System.Drawing.Size(1080, 236);
             this.reTextData.TabIndex = 4;
             this.reTextData.Text = "";
             // 
@@ -396,12 +398,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.mnAbout,
             this.viewToolStripMenuItem,
             this.filterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(979, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -428,7 +429,7 @@
             this.startTraceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnRun,
             this.mnRunWithFilters});
-            this.startTraceToolStripMenuItem.Image = global::ExpressProfiler.Properties.Resources.imStart;
+            this.startTraceToolStripMenuItem.Image = global::BilnexProfiler.Properties.Resources.imStart;
             this.startTraceToolStripMenuItem.Name = "startTraceToolStripMenuItem";
             this.startTraceToolStripMenuItem.Size = new System.Drawing.Size(324, 22);
             this.startTraceToolStripMenuItem.Text = "&Start trace";
@@ -450,7 +451,7 @@
             // 
             // pauseTraceToolStripMenuItem
             // 
-            this.pauseTraceToolStripMenuItem.Image = global::ExpressProfiler.Properties.Resources.imPause;
+            this.pauseTraceToolStripMenuItem.Image = global::BilnexProfiler.Properties.Resources.imPause;
             this.pauseTraceToolStripMenuItem.Name = "pauseTraceToolStripMenuItem";
             this.pauseTraceToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.pauseTraceToolStripMenuItem.Size = new System.Drawing.Size(324, 22);
@@ -459,7 +460,7 @@
             // 
             // stopTraceToolStripMenuItem
             // 
-            this.stopTraceToolStripMenuItem.Image = global::ExpressProfiler.Properties.Resources.imStop;
+            this.stopTraceToolStripMenuItem.Image = global::BilnexProfiler.Properties.Resources.imStop;
             this.stopTraceToolStripMenuItem.Name = "stopTraceToolStripMenuItem";
             this.stopTraceToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
             this.stopTraceToolStripMenuItem.Size = new System.Drawing.Size(324, 22);
@@ -539,7 +540,7 @@
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.selectAllToolStripMenuItem.Text = "Select all";
             this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
@@ -547,7 +548,7 @@
             // 
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.findToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.findToolStripMenuItem.Text = "Find...";
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
             // 
@@ -555,22 +556,22 @@
             // 
             this.findNextToolStripMenuItem.Name = "findNextToolStripMenuItem";
             this.findNextToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.findNextToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.findNextToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.findNextToolStripMenuItem.Text = "Find next";
             this.findNextToolStripMenuItem.Click += new System.EventHandler(this.findNextToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(260, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(258, 6);
             // 
             // clearTraceWindowToolStripMenuItem
             // 
-            this.clearTraceWindowToolStripMenuItem.Image = global::ExpressProfiler.Properties.Resources.imClear;
+            this.clearTraceWindowToolStripMenuItem.Image = global::BilnexProfiler.Properties.Resources.imClear;
             this.clearTraceWindowToolStripMenuItem.Name = "clearTraceWindowToolStripMenuItem";
             this.clearTraceWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Delete)));
-            this.clearTraceWindowToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.clearTraceWindowToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.clearTraceWindowToolStripMenuItem.Text = "Clear Trace Window";
             this.clearTraceWindowToolStripMenuItem.Click += new System.EventHandler(this.clearTraceWindowToolStripMenuItem_Click);
             // 
@@ -578,7 +579,7 @@
             // 
             this.deleteSelectedToolStripMenuItem.Name = "deleteSelectedToolStripMenuItem";
             this.deleteSelectedToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.deleteSelectedToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.deleteSelectedToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.deleteSelectedToolStripMenuItem.Text = "Delete selected";
             this.deleteSelectedToolStripMenuItem.Click += new System.EventHandler(this.deleteSelectedToolStripMenuItem_Click);
             // 
@@ -586,17 +587,9 @@
             // 
             this.keepSelectedToolStripMenuItem.Name = "keepSelectedToolStripMenuItem";
             this.keepSelectedToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Delete)));
-            this.keepSelectedToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.keepSelectedToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.keepSelectedToolStripMenuItem.Text = "Keep selected";
             this.keepSelectedToolStripMenuItem.Click += new System.EventHandler(this.keepSelectedToolStripMenuItem_Click);
-            // 
-            // mnAbout
-            // 
-            this.mnAbout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.mnAbout.Name = "mnAbout";
-            this.mnAbout.Size = new System.Drawing.Size(52, 20);
-            this.mnAbout.Text = "About";
-            this.mnAbout.Click += new System.EventHandler(this.mnAbout_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -611,7 +604,7 @@
             // 
             this.stayOnTopToolStripMenuItem.Name = "stayOnTopToolStripMenuItem";
             this.stayOnTopToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.stayOnTopToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.stayOnTopToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.stayOnTopToolStripMenuItem.Text = "Stay on top";
             this.stayOnTopToolStripMenuItem.Click += new System.EventHandler(this.stayOnTopToolStripMenuItem_Click);
             // 
@@ -619,7 +612,7 @@
             // 
             this.transparentToolStripMenuItem.Name = "transparentToolStripMenuItem";
             this.transparentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.transparentToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.transparentToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.transparentToolStripMenuItem.Text = "Transparent";
             this.transparentToolStripMenuItem.Click += new System.EventHandler(this.transparentToolStripMenuItem_Click);
             // 
@@ -650,7 +643,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 510);
+            this.ClientSize = new System.Drawing.Size(1080, 737);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
@@ -658,7 +651,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Express Profiler v1.0";
+            this.Text = "Bilnex Profiler v1.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -725,7 +718,6 @@
         private System.Windows.Forms.ToolStripStatusLabel slEPS;
         private System.Windows.Forms.ToolStripMenuItem copyToXlsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem mnAbout;
         private System.Windows.Forms.ToolStripMenuItem copyAllForExcelToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tbStayOnTop;
         private System.Windows.Forms.ToolStripButton tbTransparent;

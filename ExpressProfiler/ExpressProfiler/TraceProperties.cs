@@ -94,12 +94,14 @@ namespace ExpressProfiler
             {
 
                 EventsColumns = new TraceEventsColumns
-                                    {
-                                        BatchCompleted = true,
-                                        RPCCompleted = true,
-                                        StartTime =  true,
-                                        EndTime = true
-                                    };
+                {
+                    BatchCompleted = true,
+                    RPCCompleted = true,
+                    StartTime = false,
+                    EndTime = false,
+                    ApplicationName = true,
+                    DatabaseName=true,
+                };
                 Filters = new TraceFilters
                               {
                                   MaximumEventCount = 5000,
@@ -263,22 +265,22 @@ namespace ExpressProfiler
             [Category(@"Columns")]
             [DisplayName(@"DatabaseName")]
             [Description(@"The name of the database in which the user statement is running.")]
-            [DefaultValue(false)]
+            [DefaultValue(true)]
             public bool DatabaseName { get; set; }
             [Category(@"Columns")]
             [DisplayName(@"Application name")]
             [Description(@"The name of the client application that created the connection to an instance of SQL Server. This column is populated with the values passed by the application and not the name of the program.")]
-            [DefaultValue(false)]
-            public bool ApplicationName { get; set; }
+            [DefaultValue(true)]
+            public bool ApplicationName { get; set; } //
             [Category(@"Columns")]
             [DisplayName(@"Object name")]
             [Description(@"The name of the object that is referenced.")]
-            [DefaultValue(false)]
+            [DefaultValue(true)]
             public bool ObjectName { get; set; }
             [Category(@"Columns")]
             [DisplayName(@"Host name")]
             [Description(@"Name of the client computer that originated the request.")]
-            [DefaultValue(false)]
+            [DefaultValue(true)]
             public bool HostName { get; set; }
 
         }
@@ -387,8 +389,8 @@ namespace ExpressProfiler
 
         private void btnSaveAsDefault_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.TraceSettings = m_currentsettings.GetAsXmlString();
-            Properties.Settings.Default.Save();
+            BilnexProfiler.Properties.Settings.Default.TraceSettings = m_currentsettings.GetAsXmlString();
+            BilnexProfiler.Properties.Settings.Default.Save();
         }
 
 
@@ -499,5 +501,20 @@ namespace ExpressProfiler
 			}
 			return included;
 	    }
+
+        private void edEvents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TraceProperties_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edFilters_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

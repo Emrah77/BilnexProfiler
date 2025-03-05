@@ -7,11 +7,11 @@ namespace ExpressProfiler.Ecosystem
 {
     class ExpressProfiler : ISsmsAddin4
     {
-        public string Version { get { return "2.0"; } }
-        public string Description { get { return "Ecosystem integration for ExpressProfiler"; } }
-        public string Name { get { return "ExpressProfiler"; } }
-        public string Author { get { return "ExpressProfiler"; } }
-        public string Url { get { return "https://expressprofiler.codeplex.com/"; } }
+        public string Version { get { return "1.0"; } }
+        public string Description { get { return "Bilnex Sql Server Profiler"; } }
+        public string Name { get { return "BilnexProfiler"; } }
+        public string Author { get { return "BilnexProfiler"; } }
+        public string Url { get { return "https://bilnex.com.tr/"; } }
 
         internal static ISsmsFunctionalityProvider6 m_Provider;
         public void OnLoad(ISsmsExtendedFunctionalityProvider provider)
@@ -50,9 +50,9 @@ namespace ExpressProfiler.Ecosystem
         }
 
         private readonly ICommandImage m_CommandImage = new CommandImageForEmbeddedResources(typeof(ExecuteExpressProfiler).Assembly, "ExpressProfiler.Ecosystem.Resources.Icon.png");
-        public string Name {get { return "ExpressProfilerExecute"; }}
-        public string Caption { get { return "ExpressProfiler"; } }
-        public string Tooltip { get { return "Execute ExpressProfiler"; } }
+        public string Name {get { return "BilnexProfilerExecute"; }}
+        public string Caption { get { return "BilnexProfiler"; } }
+        public string Tooltip { get { return "Execute BilnexProfiler"; } }
         public ICommandImage Icon { get { return m_CommandImage; } }
         public string[] DefaultBindings { get { return new string[] { }; } }
         public bool Visible { get { return true; } }
